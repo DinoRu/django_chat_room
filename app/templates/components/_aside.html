@@ -1,0 +1,59 @@
+<nav>
+  {# Group links #}
+  <h2>Groups</h2>
+  <ul class="nav__ul">
+    <li class="nav__li">
+      <a
+        href="#"
+        class="nav__link"
+        data-group-name="hi"
+        data-group-public="true"
+      >
+        #hi
+      </a>
+    </li>
+    <li class="nav__li">
+      <a
+        href="#"
+        class="nav__link"
+        data-group-name="python"
+        data-group-public="true"
+        >#python</a
+      >
+    </li>
+    <li class="nav__li">
+      <a
+        href="#"
+        class="nav__link"
+        data-group-name="events"
+        data-group-public="true"
+        >#events</a
+      >
+    </li>
+    <li class="nav__li">
+      <a
+        href="#"
+        class="nav__link"
+        data-group-name="off-tpu_compilation_cache_key"
+        data-group-public="true"
+        >#off-topic</a
+      >
+    </li>
+  </ul>
+  {# End Group links #} {# Users links #}
+  <h2>Users</h2>
+  <ul class="nav__ul">
+    {% for user in users %}
+    <li class="nav__li">
+      <a
+        href="#"
+        class="nav__link"
+        data-group-name="{{ user.username }}"
+        data-group-public="false"
+        >{{ user.username }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+  {# End Users links #}
+</nav>
